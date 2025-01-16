@@ -55,7 +55,7 @@ class EnhancedAgriculturalDashboard:
         # Afficher la carte
         self.display_map(selected_parcelle)
     
-        if st.button("Générer un rapport PDF"):
+        if st.button("Générer un rapport"):
             with st.spinner("Génération du rapport en cours..."):
                 pdf_path = self.report_generator.generate_parcelle_report(selected_parcelle)
                 st.success(f"Rapport généré : {pdf_path}")
